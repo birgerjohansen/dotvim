@@ -10,6 +10,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,12 +87,6 @@ set nowb
 let mapleader = ","
 let maplocalleader = "\\"
 
-" PLUGINS
-"map <Leader>] <Plug>MakeGreen
-"map <Leader>td <Plug>TaskList
-"map <leader>n :NERDTreeToggle<CR>
-"let g:pep8_map='<leader>8'
-
 " MAPPINGS
 noremap j gj
 noremap k gk
@@ -111,6 +108,11 @@ map  :w!<CR>:!aspell check %<CR>:e! %<CR>
 "let g:SuperTabDefaultCompletionType = "<c-n>"
 "let g:SuperTabLongestHighlight = 1
 "let g:SuperTabCrMapping = 1
+
+"ULTISNIPS
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " COMPLETION
 set complete=.,w,b,u,t
