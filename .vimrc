@@ -13,6 +13,9 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'godlygeek/tabular'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
