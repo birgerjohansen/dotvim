@@ -163,6 +163,10 @@ augroup ft_python
     au FileType python iabbrev <buffer> afo assert False, "Okay"
 augroup END
 
+augroup ft_epub
+    au BufReadCmd   *.epub      call zip#Browse(expand("<amatch>"))
+augroup END
+
 " augroup ft_vim
 "     au!
 " 
