@@ -112,6 +112,9 @@ map  :w!<CR>:!aspell check %<CR>:e! %<CR>
 "let g:SuperTabLongestHighlight = 1
 "let g:SuperTabCrMapping = 1
 
+"TABLE MODE
+let g:table_mode_corner = '|'
+
 "ULTISNIPS
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
