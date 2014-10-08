@@ -15,6 +15,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 
 " All of your Plugins must be added before the following line
@@ -164,6 +165,10 @@ augroup ft_python
     au FileType python inoremap <buffer> <c-b> """"""<left><left><left>
 
     au FileType python iabbrev <buffer> afo assert False, "Okay"
+augroup END
+
+augroup ft_epub
+    au BufReadCmd   *.epub      call zip#Browse(expand("<amatch>"))
 augroup END
 
 " augroup ft_vim
