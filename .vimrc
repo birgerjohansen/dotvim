@@ -27,6 +27,9 @@ filetype plugin indent on    " required
 " :PluginSearch(!) foo - search (or refresh cache first) for foo
 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 
+" disable markdown folding
+let g:vim_markdown_folding_disabled=1
+
 " BASIC
 set encoding=utf-8
 set modelines=0
@@ -54,7 +57,7 @@ set backupdir=~/.vim/tmp/backup
 
 " set list
 " set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-set shell=/bin/bash\ --login
+set shell=/usr/local/bin/zsh\ --login
 set lazyredraw
 set matchtime=3
 set showbreak=↪
