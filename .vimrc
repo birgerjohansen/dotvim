@@ -16,6 +16,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'altercation/vim-colors-solarized'
 
 
 " All of your Plugins must be added before the following line
@@ -57,7 +58,7 @@ set backupdir=~/.vim/tmp/backup
 
 " set list
 " set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-set shell=/usr/local/bin/zsh\ --login
+set shell=/bin/zsh\ --login
 set lazyredraw
 set matchtime=3
 set showbreak=↪
@@ -141,7 +142,7 @@ set formatoptions=qrn1
 set background=dark
 syntax on
 hi SpellBad ctermfg=015 ctermbg=160
-" colorscheme solarized
+"colorscheme solarized
 
 " FOLDING
 set foldmethod=indent
