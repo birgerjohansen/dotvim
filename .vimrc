@@ -202,6 +202,7 @@ augroup END
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>ed :e ~/.vim/custom-dictionary.utf-8.add<cr>
 nnoremap <leader>em :e ~/.mutt/muttrc<cr>
+nnoremap <leader>ez :e ~/.zshrc<cr>
 
 " AT THE END
 filetype on                          " try to detect file types
