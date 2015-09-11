@@ -18,6 +18,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,6 +32,9 @@ filetype plugin indent on    " required
 
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1
+"let g:pandoc_syntax_conceal_use=0
+"let g:pandoc_syntax_style_emphases=0
+let g:pandoc_spell_enabled=0
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -202,7 +207,7 @@ augroup ft_markdown
     " Use <localleader>1/2/3 to add headings.
     au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=:redraw<cr>
     au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-:redraw<cr>
-    au Filetype markdown nnoremap <buffer> <localleader>3 mzI###<space>`zllll<ESC>
+    au Filetype markdown nnoremap <buffer> <localleader>3 mzI###<space><ESC>`zllll
 augroup END
 
 augroup ft_taskjuggler
@@ -214,6 +219,7 @@ nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>ed :e ~/.vim/custom-dictionary.utf-8.add<cr>
 nnoremap <leader>em :e ~/.mutt/muttrc<cr>
 nnoremap <leader>ez :e ~/.zshrc<cr>
+nnoremap <leader>ea :e ~/.mutt/aliases<cr>
 
 " AT THE END
 filetype on                          " try to detect file types
