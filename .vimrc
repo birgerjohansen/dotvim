@@ -32,9 +32,11 @@ filetype plugin indent on    " required
 
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1
-"let g:pandoc_syntax_conceal_use=0
-"let g:pandoc_syntax_style_emphases=0
-let g:pandoc_spell_enabled=0
+
+" pandoc syntax
+let g:pandoc#syntax#conceal#use=0
+let g:pandoc#syntax#style#emphases=0
+let g:pandoc#spell#enabled=0
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -71,8 +73,9 @@ set undofile
 set backup
 set backupdir=~/.vim/tmp/backup
 
-" set list
+set list
 " set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set listchars=tab:▸\ ,extends:❯,precedes:❮
 set shell=/bin/zsh\ --login
 set lazyredraw
 set matchtime=3
