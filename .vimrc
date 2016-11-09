@@ -20,6 +20,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'jnurmine/Zenburn'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,10 +46,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+nnoremap <leader>7 :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 " BASIC
 set encoding=utf-8
@@ -76,7 +81,7 @@ set backupdir=~/.vim/tmp/backup
 set list
 " set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set listchars=tab:▸\ ,extends:❯,precedes:❮
-set shell=/bin/zsh\ --login
+set shell=/bin/bash\ --login
 set lazyredraw
 set matchtime=3
 set showbreak=↪
@@ -140,12 +145,12 @@ let g:table_mode_corner = '|'
 
 "ULTISNIPS
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " COMPLETION
 set complete=.,w,b,u,t
-set completeopt=longest,menuone,preview
+"set completeopt=longest,menuone,preview
 
 " TABS, SPACES, WRAPPING
 set tabstop=8
@@ -172,7 +177,7 @@ runtime macros/matchit.vim
 " FILETYPES
 augroup ft_python
     au!
-    au FileType python set omnifunc=pythoncomplete#Complete
+    "au FileType python set omnifunc=pythoncomplete#Complete
 
     au FileType python setlocal define=^\s*\\(def\\\\|class\\)
     au FileType man nnoremap <buffer> <cr> :q<cr>
@@ -221,7 +226,7 @@ augroup END
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>ed :e ~/.vim/custom-dictionary.utf-8.add<cr>
 nnoremap <leader>em :e ~/.mutt/muttrc<cr>
-nnoremap <leader>ez :e ~/.zshrc<cr>
+nnoremap <leader>eb :e ~/.bash_profile<cr>
 nnoremap <leader>ea :e ~/.mutt/aliases<cr>
 
 " AT THE END
