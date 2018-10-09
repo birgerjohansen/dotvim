@@ -4,7 +4,7 @@ set nocompatible
 " VUNDLE
 " ======
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -18,9 +18,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
 Plugin 'jnurmine/Zenburn'
 
 
@@ -32,14 +31,6 @@ filetype plugin indent on    " required
 " :PluginInstall(!)    - install (update) plugins
 " :PluginSearch(!) foo - search (or refresh cache first) for foo
 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-
-" disable markdown folding
-let g:vim_markdown_folding_disabled=1
-
-" pandoc syntax
-let g:pandoc#syntax#conceal#use=0
-let g:pandoc#syntax#style#emphases=0
-let g:pandoc#spell#enabled=0
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -107,7 +98,7 @@ au VimResized * :wincmd =
 "set ttimeoutlen=10
 
 " Copying text to the system clipboard.
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " SWAP
 set noswapfile
@@ -136,9 +127,9 @@ noremap <leader>v <C-w>v
 map  :w!<CR>:!aspell check %<CR>:e! %<CR>
 
 " SUPERTAB
-"let g:SuperTabDefaultCompletionType = "<c-n>"
-"let g:SuperTabLongestHighlight = 1
-"let g:SuperTabCrMapping = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabLongestHighlight = 1
+let g:SuperTabCrMapping = 1
 
 "TABLE MODE
 let g:table_mode_corner = '|'
@@ -147,6 +138,8 @@ let g:table_mode_corner = '|'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:ultisnips_python_style="numpy"
 
 " COMPLETION
 set complete=.,w,b,u,t
@@ -222,12 +215,13 @@ augroup ft_taskjuggler
     au BufNewFile,BufRead *.tjp,*.tji               setf tjp
 augroup END
 
+"autocmd BufNewFile,BufReadPost ~/.muttrc setl filetype=neomuttrc
+
 " QUICK EDITING
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>ed :e ~/.vim/custom-dictionary.utf-8.add<cr>
 nnoremap <leader>em :e ~/.mutt/muttrc<cr>
-nnoremap <leader>eb :e ~/.bash_profile<cr>
-nnoremap <leader>ea :e ~/.mutt/aliases<cr>
+nnoremap <leader>eb :e ~/.bashrc<cr>
 
 " AT THE END
 filetype on                          " try to detect file types
