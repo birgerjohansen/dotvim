@@ -36,10 +36,16 @@ filetype plugin indent on    " required
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1
 
+"default latex file type
+let g:tex_flavor = "latex"
+
 " pandoc syntax
 let g:pandoc#syntax#conceal#use=0
 let g:pandoc#syntax#style#emphases=0
 let g:pandoc#spell#enabled=0
+" statusline
+"
+set statusline=%<%f\ %h%m%r%=%-20.(line=%l,col=%c%V,totlin=%L%)\%h%m%r%=%-40(,bytval=0x%B,%n%Y%)\%P
 
 " Syntastic
 set statusline+=%#warningmsg#
