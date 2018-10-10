@@ -1,0 +1,51 @@
+snippet beam "Beamer skeleton"
+% !TEX encoding = UTF-8 Unicode
+\documentclass[t]{beamer}
+\usetheme{spn}
+\title[]{TITLE}
+\subtitle{Subtitle}
+\author[~]{Author}
+\institute[]{Institue}
+\date[01.01.2018]{}
+
+\begin{document}
+\spntitlepage
+
+\section{Section}
+
+\begin{frame}
+    \frametitle{Frametitle}
+    \vspace{-8pt}
+    \begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+        \begin{itemize}
+            \item Bullet list
+        \end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+            \begin{center}
+		\includegraphics[width=0.99\textwidth,height=65mm,keepaspectratio]{heo_earth_service_area_65_small.png}
+            \end{center}
+	\end{column}
+	\end{columns}
+\end{frame}
+
+\end{document}
+
+endsnippet
+
+snippet lt "Longtable"
+    \begin{longtable}{lcccc}
+        \toprule 
+         & \multicolumn{2}{c}{Header 1} & \multicolumn{2}{c}{Header2} \\
+           \cline{2-3}          \cline{4-5} \\
+	Parameter & Value & Value & Value & Value \\
+        \midrule
+        \endhead
+	A & B & C & D & E \\
+	A & B & C & D & E \\
+        \midrule                                                                                                                            
+        Total  & 1 & 2 & 3 & 4 \\
+        \bottomrule
+    \end{longtable}
+endsnippet
