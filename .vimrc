@@ -21,6 +21,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'jnurmine/Zenburn'
+Plugin 'vim-python/python-syntax'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -158,7 +160,8 @@ set formatoptions=qrn1
 set background=dark
 syntax on
 hi SpellBad ctermfg=015 ctermbg=160
-"colorscheme solarized
+colorscheme solarized
+let g:python_highlight_all = 1
 
 " FOLDING
 set foldmethod=indent
