@@ -18,6 +18,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'jnurmine/Zenburn'
@@ -142,7 +143,6 @@ let g:table_mode_corner = '|'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:ultisnips_python_style="numpy"
 
 " COMPLETION
@@ -178,6 +178,7 @@ augroup ft_python
     "au FileType python set omnifunc=pythoncomplete#Complete
 
     au FileType python setlocal define=^\s*\\(def\\\\|class\\)
+    au FileType python setlocal formatprg=autopep8\ -
     au FileType man nnoremap <buffer> <cr> :q<cr>
 
     " Jesus tapdancing Christ, built-in Python syntax, you couldn't let me
@@ -219,8 +220,6 @@ augroup END
 augroup ft_taskjuggler
     au BufNewFile,BufRead *.tjp,*.tji               setf tjp
 augroup END
-
-"autocmd BufNewFile,BufReadPost ~/.muttrc setl filetype=neomuttrc
 
 " QUICK EDITING
 nnoremap <leader>ev :e $MYVIMRC<cr>
