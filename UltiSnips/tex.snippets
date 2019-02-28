@@ -34,6 +34,25 @@ snippet beam "Beamer skeleton"
 
 endsnippet
 
+snippet colframe "Frame with columns"
+\begin{frame}
+    \frametitle{Frametitle}
+    \vspace{-8pt}
+    \begin{columns}[T]
+	\begin{column}{0.5\textwidth}
+        \begin{itemize}
+            \item Bullet list
+        \end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+            \begin{center}
+		\includegraphics[width=0.99\textwidth,height=65mm,keepaspectratio]{heo_earth_service_area_65_small.png}
+            \end{center}
+	\end{column}
+	\end{columns}
+\end{frame}
+endsnippet
+
 snippet lt "Longtable"
     \begin{longtable}{lcccc}
         \toprule 

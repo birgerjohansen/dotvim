@@ -19,6 +19,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'jnurmine/Zenburn'
@@ -48,6 +49,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 nnoremap <leader>7 :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+""NERDTree
+"map <C-n> :NERDTreeToggle<CR>
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " BASIC
 set encoding=utf-8
@@ -103,7 +110,7 @@ au VimResized * :wincmd =
 "set ttimeoutlen=10
 
 " Copying text to the system clipboard.
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " SWAP
 set noswapfile
